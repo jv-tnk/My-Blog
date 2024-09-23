@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<%- include("../partials/header.ejs") %>
+<body>
+   
+
+    <main>
+        <section>
+        <div class="container-faq">
+            <div class="faq">
+                <% data.forEach(function(faq) { %>
+                    <div class="faq-item">
+                        <h2 class="title"><%= faq.title %></h2>
+                        <p class="text"><%= faq.text %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    
+</body>
+</html>
+
+<%- include("../partials/footer.ejs") %>
